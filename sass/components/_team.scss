@@ -1,0 +1,86 @@
+.team {
+	background-color: $section-color;
+
+}
+.team__card-gallery{
+    @include flex_centering(flex);
+    flex-direction: column;
+    gap: 30px;
+    
+    @media screen and (min-width: $tablet){
+        @include flex-grid (2, 30px);
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop){
+        @include flex-grid (4);
+    }
+
+    
+}
+
+.team__card-item {
+	text-align: center;
+	background-color: $primary-page-color;
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 
+        0px 1px 3px rgba(0, 0, 0, 0.12), 
+        0px 1px 1px rgba(0, 0, 0, 0.14), 
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    & img{
+        display: block;
+        margin: 0 auto;
+        width: calc(100vw - 30px);
+        max-width: 450px;
+
+        @media screen and (min-width: $tablet){
+             max-width: 354px;
+        }
+        @media screen and (min-width: $desktop){
+            width: 270px; 
+        }
+    }
+
+
+
+}
+.team__member-card-description{
+	padding: 30px;
+}
+
+.team__member-name{
+    font-size: 16px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+}
+.team__member-position{
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.18;
+    color: $secondary-text-color;
+}
+
+
+.team__member-socials {
+    @include flex-grid(4, 10px);
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+.team__member-social-icon {
+    @include flex_centering;
+
+	background-color: transparent;
+
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	fill: $icons-color;
+
+	transition: fill $anim-std, background-color $anim-std;
+    &:hover, &:focus{
+        fill: $pure-white-logo-color;
+	    background-color: $accent-color;
+    }
+}

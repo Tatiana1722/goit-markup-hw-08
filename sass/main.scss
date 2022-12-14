@@ -1,0 +1,28 @@
+//reset styles
+@import "./utils/reset-styles";
+//variables
+@import "./utils/variables";
+@import "./utils/breakpoints";
+//mixins
+@import "./utils/mixins.scss";
+//base
+@import "./utils/utilities-classes";
+@import "./utils/base";
+@import "./utils/container";
+@import "./components/buttons";
+@import "./components/logo";
+//header
+@import "./components/mobile-menu";
+@import "./components/header";
+//main page
+@import "./components/hero";
+@import "./components/features";
+@import "./components/gallery";
+@import "./components/team";
+@import "./components/clients";
+//portfolio page
+@import "./components/portfolio-gallery";
+//footer
+@import "./components/footer";
+//modal
+@import "./components/modal";

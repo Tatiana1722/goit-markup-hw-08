@@ -1,0 +1,51 @@
+.features{
+	display: inline-flex;
+	flex-direction: column;
+	gap: 30px;
+
+@media screen and (min-width: $tablet) {
+	@include flex_grid(2);
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+@media screen and (min-width: $desktop) {
+	@include flex_grid(4);
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+}
+
+}
+
+.features__bg {
+    @include flex_centering;
+	background-color: $section-color;
+	height: 120px;
+	border: none;
+	margin-bottom: 30px;
+	
+
+
+}
+.features__item {
+	& > h3{
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		@media screen and (max-width: $mobile) {
+			text-align: center;
+			font-size: 14px;
+		}	
+	}
+	& > p{
+		color: $secondary-text-color;
+		line-height: 1.71;
+	}
+	@media screen and (min-width: $tablet) {
+		width: 354px;}
+
+	@media screen and (min-width: $desktop) {
+	    width: 270px;
+	}
+}

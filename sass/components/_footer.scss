@@ -1,0 +1,143 @@
+footer {
+	background-color: $secondary-page-color;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
+}
+.footer {
+	@include flex-centering;
+	flex-direction: column;
+	text-align: center;
+	gap: 60px;
+
+
+
+	@media screen and (min-width: $tablet) {
+		gap: 130px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		@include flex-centering;
+		align-items: baseline;
+		justify-content: space-evenly
+		
+	}
+	@media screen and (min-width: $desktop){
+		@include flex_grid(3, 70px);
+		
+		text-align: left;
+	}
+
+
+}
+.footer__addresses{
+	width: 231px;
+}
+.footer__logo-position {
+	display: block;
+	margin-bottom: 20px;
+}
+.footer__address-list {
+	margin-bottom: 9px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+}
+
+.footer__address-link {
+	display: block;
+	font-style: normal;
+	text-decoration: none;
+	line-height: 1.71;
+	color: $footer-link-color;
+	transition: color $anim-std;
+
+	&:hover, &:focus{
+		color: $accent-color;
+	}
+
+}
+.footer__address-location {
+	color: $pure-white-logo-color;
+	transition: color $anim-std;
+}
+
+
+.footer__links {
+	padding-top: 12px;
+}
+.footer__dscr{
+	text-transform: uppercase;
+	color: $primary-page-color;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	margin-bottom: 20px;
+}
+.footer__links-list {
+	@include flex_grid(4, 10px)
+
+}
+
+.footer__icon {
+	@include flex_centering;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	fill: $pure-white-logo-color;
+
+	transition: background-color $anim-std;
+    &:hover, &:focus{
+        background-color: $accent-color;
+    }
+}
+
+.footer__form{
+
+	@media screen and (min-width: $desktop) {
+	padding-top: 12px;
+	margin-left: auto; 
+	}
+}
+.footer__form-thumb{
+	@include flex_centering;
+	flex-direction: column;
+	text-align: center;
+	gap: 15px;
+
+@media screen and (min-width: $desktop){
+	flex-direction: row;
+	gap: 12px;
+	
+}
+
+
+}
+.footer__subscribe-field{
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 16px;
+	line-height: 1.25;
+	padding: 16px 15px;
+	background-color: $secondary-page-color;
+	width: calc(100vw - 30px);
+	max-width: 450px;
+	
+	height: 50px;
+	border: $border_std rgba(255, 255, 255, 0.3);
+	outline-offset: -1px;
+	border-radius: 4px;
+	transition: border-color $anim-std;
+    &:not(:placeholder-shown), &:focus{
+        border-color: $accent-color;
+		outline: 1px solid transparent;
+    }
+	@media screen and (min-width: $tablet) {
+		width: 460px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 358px;
+	}
+}
